@@ -1,0 +1,45 @@
+{
+  "name": "pubsub-browser",
+  "description": "command line tool to browse messages on GCP pubsub messages",
+  "version": "1.1.0",
+  "license": "UNLICENSED",
+  "author": "L.L.Bean",
+  "repository": {
+    "type": "git",
+    "url": "https://gh.llbean.com/CTAgile/pubsub-browser.git"
+  },
+  "bugs": {
+    "url": "https://gh.llbean.com/CTAgile/pubsub-browser/issues"
+  },
+  "homepage": "https://gh.llbean.com/CTAgile/pubsub-browser",
+  "private": false,
+  "main": "./bin/pubsub-browser-tool.js",
+  "preferGlobal": true,
+  "scripts": {
+    "start": "node index.js",
+    "debug": "nodemon --inspect=0.0.0.0:5858 -L index.js",
+    "debug-brk": "nodemon --inspect-brk=0.0.0.0:5858 -L index.js",
+    "test": "echo \"pubsub-browser: no test step defined.\"",
+    "build": "echo \"pubsub-browser: no build step defined or necessary.\"",
+    "lint": "eslint index.js tests ",
+    "complexity": "es6-plato -r -d complexity_report -t 'pubsub-browser Complexity' index.js"
+  },
+  "bin": {
+    "pubsub-browser": "./bin/pubsub-browser-tool.js"
+  },
+  "dependencies": {
+    "commander": "^2.16.0",
+    "@google-cloud/pubsub": "^0.20.0",
+    "@google-cloud/monitoring": "^1.2.2"
+  },
+  "devDependencies": {
+    "coverify": "^1.4.1",
+    "es6-plato": "^1.0.6",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "minimatch": "^3.0.4"
+  }
+}
