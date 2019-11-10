@@ -14,8 +14,8 @@
     "complexity": "es6-plato -r -d complexity_report -t 'pubsub-browser Complexity' index.js"
   },
   "dependencies": {
-    "commander": "2.20.3",
     "@google-cloud/pubsub": "1.1.5",
+    "commander": "4.0.0",
     "@google-cloud/monitoring": "1.5.0"
   },
   "devDependencies": {
