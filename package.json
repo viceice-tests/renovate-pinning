@@ -18,7 +18,9 @@
     "commander": "4.1.1",
     "@google-cloud/monitoring": "1.7.0",
     "mongodb": "3.5.5",
-    "nodemailer": "6.4.5"
+    "nodemailer": "6.4.5",
+    "uuid": "7.0.2",
+    "mongoose": "5.9.3"
   },
   "devDependencies": {
     "coverify": "^1.4.1",
