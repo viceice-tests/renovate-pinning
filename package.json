@@ -14,11 +14,11 @@
     "complexity": "es6-plato -r -d complexity_report -t 'pubsub-browser Complexity' index.js"
   },
   "dependencies": {
-    "@google-cloud/pubsub": "1.1.5",
-    "commander": "4.0.0",
-    "@google-cloud/monitoring": "1.5.0",
-    "mongodb": "3.5.4",
-    "nodemailer": "6.4.4"
+    "@google-cloud/pubsub": "1.6.0",
+    "commander": "4.1.1",
+    "@google-cloud/monitoring": "1.7.0",
+    "mongodb": "3.5.5",
+    "nodemailer": "6.4.5"
   },
   "devDependencies": {
     "coverify": "^1.4.1",
