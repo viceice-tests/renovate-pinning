@@ -16,7 +16,9 @@
   "dependencies": {
     "@google-cloud/pubsub": "1.1.5",
     "commander": "4.0.0",
-    "@google-cloud/monitoring": "1.5.0"
+    "@google-cloud/monitoring": "1.5.0",
+    "mongodb": "3.5.4",
+    "nodemailer": "6.4.4"
   },
   "devDependencies": {
     "coverify": "^1.4.1",
