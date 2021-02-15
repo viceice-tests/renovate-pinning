@@ -16,6 +16,7 @@ module.exports = {
   recreateClosed: true,
   stabilityDays: 7,
   prCreation:'not-pending',
+  lockFileMaintenance: { enabled: true },
   labels: [
     'renovate'
   ],
