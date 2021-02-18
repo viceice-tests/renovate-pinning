@@ -5,6 +5,7 @@ on:
 
 env:
   NODE_VERSION: 12
+  LOG_LEVEL: debug
   RENOVATE_TOKEN: ${{ secrets.GH_RENOVATE }}
   RENOVATE_CONFIG_FILE: renovate-config.js
 
@@ -17,17 +18,20 @@ jobs:
 
     steps:
       - name: Set up Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2.1.4
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2
 
       - name: Install latest npm
         run: npm i -g npm
+
+      - name: Install latest renovate
+        run: npm i -g renovate
       
       - name: validate
-        run: npx -p renovate -- renovate-config-validator
+        run: renovate-config-validator
           
       - name: renovate
-        run: npx -p renovate -- renovate ${{github.repository}}
+        run: renovate ${{github.repository}}
