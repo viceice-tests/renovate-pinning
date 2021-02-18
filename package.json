@@ -20,7 +20,7 @@
     "mongodb": "3.5.5",
     "mongoose": "5.9.3",
     "nodemailer": "6.4.5",
-    "uuid": "7.0.2"
+    "uuid": "7.0.3"
   },
   "devDependencies": {
     "coverify": "^1.4.1",
