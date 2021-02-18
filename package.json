@@ -18,7 +18,7 @@
     "@google-cloud/pubsub": "1.6.0",
     "commander": "4.1.1",
     "mongodb": "3.5.5",
-    "mongoose": "5.9.3",
+    "mongoose": "5.11.17",
     "nodemailer": "6.4.5",
     "uuid": "7.0.2"
   },
