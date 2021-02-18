@@ -1,7 +1,5 @@
 module.exports = {
   platform: "github",
-  logFileLevel: "warn",
-  logLevel: "info",
   onboarding: true,
   onboardingConfig: {
     extends: ["config:base"],
