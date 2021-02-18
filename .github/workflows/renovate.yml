@@ -1,0 +1,33 @@
+name: renovate
+
+on:
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: 12
+  RENOVATE_TOKEN: ${{ secrets.GH_RENOVATE }}
+  RENOVATE_CONFIG_FILE: renovate-config.js
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+
+    # tests shouldn't need more time
+    timeout-minutes: 30
+
+    steps:
+      - name: Set up Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - uses: actions/checkout@v2.3.4
+
+      - name: Install latest npm
+        run: npm i -g npm
+      
+      - name: validate
+        run: npx -p renovate -- renovate-config-validator
+          
+      - name: renovate
+        run: npx -p renovate -- renovate ${{github.repository}}

@@ -1,24 +1,44 @@
 module.exports = {
-  platform: 'github',
-  logFileLevel: 'warn',
-  logLevel: 'info',
+  platform: "github",
+  logFileLevel: "warn",
+  logLevel: "info",
   onboarding: true,
   onboardingConfig: {
-    extends: ['config:base'],
+    extends: ["config:base"],
   },
   autodiscover: true,
-  autodiscoverFilter: 'rvillane/renovate-pinning',
+  autodiscoverFilter: "rvillane/renovate-pinning",
   requireConfig: true,
   automerge: false,
-  extends: ['group:allNonMajor'],
-  enabledManagers: ['npm','gradle'],
-  rangeStrategy: 'pin',
+  extends: ["group:allNonMajor"],
+  enabledManagers: ["npm", "gradle"],
+  rangeStrategy: "pin",
   recreateClosed: true,
   stabilityDays: 7,
-  prCreation:'not-pending',
+  prCreation: "not-pending",
   lockFileMaintenance: { enabled: true },
-  labels: [
-    'renovate'
+  labels: ["renovate"],
+  ignoreDeps: [
+    "eslint",
+    "coverify",
+    "eslint-plugin-security",
+    "eslint-plugin-node",
+    "eslint-config-airbnb",
+    "eslint-plugin-import",
+    "eslint-plugin-promise",
+    "eslint-plugin-jsx-a11y",
+    "eslint-plugin-react",
+    "es6-plato",
+    "minimatch",
+    "tap-colorize",
   ],
-  ignoreDeps: ['eslint','coverify','eslint-plugin-security','eslint-plugin-node','eslint-config-airbnb', 'eslint-plugin-import','eslint-plugin-promise', 'eslint-plugin-jsx-a11y', 'eslint-plugin-react','es6-plato','minimatch','tap-colorize']
+  // for testing
+  force: {
+    includeForks: true,
+    branchConcurrentLimit: 0,
+    prCreation: "immediate",
+    prConcurrentLimit: 0,
+    prHourlyLimit: 0,
+    schedule: null,
+  }
 };
