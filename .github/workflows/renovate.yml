@@ -32,6 +32,8 @@ jobs:
       
       - name: validate
         run: |
+          set -ex
+          node --version
           npm --version
           renovate --version
           renovate-config-validator
