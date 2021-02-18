@@ -31,7 +31,10 @@ jobs:
         run: npm i -g renovate
       
       - name: validate
-        run: renovate-config-validator
+        run: |
+          npm --version
+          renovate --version
+          renovate-config-validator
           
       - name: renovate
         run: renovate ${{github.repository}}
